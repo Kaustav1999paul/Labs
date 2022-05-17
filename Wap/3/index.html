@@ -1,0 +1,49 @@
+<html>
+
+
+<head>
+<title>Exper 3</title>
+<style>
+table, tr, th {
+padding: 20px;
+}
+</style>
+</head>
+
+<body>
+<button onClick="b()">Click To get Data</button>
+<table id="win"></table>
+
+
+
+<script>
+
+function b(){
+var sam = new XMLHttpRequest();
+sam.onreadystatechange = function(){
+      if(this.readyState == 4 && this.status == 200){
+        alert("Heool");
+          a(this);
+      }
+     };
+     sam.open("GET", "file.xml", true);
+     sam.send();
+}
+
+function a(xml){
+    var i;
+    var xmlDoc = xml.responseXML();
+    var table = "<tr><th>USN</th><th>Name</th></tr>";
+    var x = xmlDoc.getElementByTagName("student");
+    for(i=0; i<x.lenght; i++){
+            table += "<tr><td>"+x[i].getElementByTagName("usn")[0].childNode[0].nodeValue + "</td><td>" + x[i].getElementByTagName("name")[0].childNode[0].nodeValue+"</td></tr>";
+    }
+    document.getElementById("win").innerHTML = table;
+    }
+
+</script>
+
+</body>
+</html>
+
+
