@@ -31,34 +31,34 @@
                 <meta charset="utf-8">
                 <style>
 
-                        .but{
-                                padding: 20px;
-                                background-color: red;
-                                border-radius: 20px;
-                                border: none;
-                                cursor: pointer;
-                                color: white;
-                                box-shadow: 0 0 10px 4px grey;
-                                margin: 30px;
-                                transition: 0.5s ease;
-                        }
+			.but{
+				padding: 20px;
+				background-color: red;
+				border-radius: 20px;
+				border: none;
+				cursor: pointer;
+				color: white;
+				box-shadow: 0 0 10px 4px grey;
+				margin: 30px;
+				transition: 0.5s ease;
+			}
 
-                        .but:hover{
-                                background-color: orange;
-                                padding: 30px;
-                        }
+			.but:hover{
+				background-color: orange;
+				padding: 30px;
+			}
 
                         student{
                                 display:none;
                         }
 
                         table,th,td{
-                                padding: 10px;
-                                text-align: center;
+				padding: 10px;
+				text-align: center;
                                 border:2px solid black;
                                 border-collapse:collapse;
-                                background-color: white;
-                                box-shadow: 0 0 10px 4px grey;
+				background-color: white;
+				box-shadow: 0 0 10px 4px grey;
                         }
                         th,td{
                                 padding:15px;
@@ -72,29 +72,23 @@
                                         var myTable = "<tr><th>Name</th><th>USN</th></tr>";
                                         var n = document.getElementsByTagName("student");
                                         for(i=0;i<n.length;i++){
-                                                myTable += "<tr><td>"+n[i].getElementsByTagName("name")[0]
-                                                                .childNodes[0].nodeValue
-                                                                +"</td><td>"
-                                                                +n[i].getElementsByTagName("usn")[0]
-                                                                .childNodes[0].nodeValue
-                                                                + "</td></tr>";
+                                                myTable += "<tr><td>"+n[i]
+                                                        .getElementsByTagName("name")[0]
+                                                        .childNodes[0].nodeValue
+                                                        +"</td><td>"
+                                                        +n[i].getElementsByTagName("usn")[0]
+                                                        .childNodes[0].nodeValue
+                                                        + "</td></tr>";
                                                 }
                         document.getElementById("dataTable").innerHTML=myTable;
                         }
                 </script>
 
-                <center>
+		<center>
                 <input type="button" class="but" onclick="callTable()" value="Click Here">
                 <br>
                 <table id="dataTable"></table>
-                </center>
+		</center>
         </body>
 </html>
-
-
-
-
-
-
-
 
