@@ -3,16 +3,13 @@
   <head>
   <title>EXP 4</title>
   <style>
-
 *{
     margin: 0;
     padding: 0;
 }
-
 .body{
     background-color: rgb(255, 255, 255);
 }
-
 .regButton{
     width: 100%;
     padding-top: 10px;
@@ -27,14 +24,12 @@
     transition: 0.5s ease;
     box-shadow: 0 0 17px 7px grey;
 }
-
 .regButton:hover{
     background-image: linear-gradient(45deg, red, orange);
     color: white;
     height: 50px;
     box-shadow: 0 0 10px 10px rgba(61, 61, 61, 0.418);
 }
-
 .container{
     margin: 13%;
     background-color: rgb(255, 255, 255);
@@ -42,8 +37,6 @@
     border-radius: 20px;
     box-shadow: 0 0 60px 5px orange;
 }
-
-
 .reset{
     padding: 10px;
     background-color: rgb(255, 255, 255);
@@ -58,7 +51,6 @@
   <body class="body">
   <div class="container">
   <div class="text-center">
-
   <div class="col-md-6 mt-5 text-center">
   <h3 class="signin-text mb-5">RV Account Login</h3><br></br>
   <form action="" class="myForm text-center">
@@ -68,30 +60,21 @@
   <button type="button" class="regButton" onclick="check()">Login</button>
   <button type="button" class="reset" onclick="reset()">Clear textBox</button>
   </div>
-
   </form>
-
   </div>
   </div>
   </div>
 
   <script>
-
 	// USERNAME = 1RV21MCA001
 	// PASSWoRD = 1@aZ12345
-
-
-
-
 	function reset(){
 		document.getElementById("userName").value = '';
-                document.getElementById("passWord").value = '';
+        document.getElementById("passWord").value = '';
 	}
-
 
 	var ck_username = /^1[A-ZA-Z0-90-9A-ZA-ZA-Z0-90-90-9]{10,}$/;
         var ck_pwd = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-
 
         function check(form){
 		var userid = document.getElementById("userName").value;
@@ -99,27 +82,20 @@
 
 		if(userid == "" || pwd == ""){
 		alert("Username or Password should not be Empty");
-		}
-		else if(userid.length <= 3){
+		}else if(userid.length <= 3){
 		alert("Username too short.")
-		}
-		else if(pwd.length <= 3){ 
-                	alert("Password too short.")
-                }
-		else{
-                     if ((ck_username.test(userid)) && (ck_pwd.test(pwd))){
-                                alert("Welcome back "+ userid);
-                                document.write(Date());
+		}else if(pwd.length <= 3){ 
+            alert("Password too short.")
+        }else{
+            if ((ck_username.test(userid)) && (ck_pwd.test(pwd))){
+                alert("Welcome back "+ userid);
+                document.write(Date());
 				document.write("\n  Welcome "+ userid);
 				applycolor();
-                     }else{
-		     		alert("Error in login!!")
-                     }
-                }
-
-
-
-
+            }else{
+		     	alert("Error in login!!")
+            }
+        }
 	function colorpicker(){
     		var num = '0123456789ABCDEF';
     		var code = "#";
@@ -128,15 +104,11 @@
     		}
     		return code;
 	}
-
-
-
 	function applycolor(){
     		var b = document.getElementById("color");
     		document.body.style.background = colorpicker();
 	}
-
-    }
+}
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
