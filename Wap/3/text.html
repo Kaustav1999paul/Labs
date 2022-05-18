@@ -28,7 +28,6 @@
                         </student>
                 </students>
         <head>
-                <meta charset="utf-8">
                 <style>
 
 			.but{
@@ -74,16 +73,13 @@
                                         for(i=0;i<n.length;i++){
                                                 myTable += "<tr><td>"+n[i]
                                                         .getElementsByTagName("name")[0]
-                                                        .childNodes[0].nodeValue
-                                                        +"</td><td>"
+                                                        .childNodes[0].nodeValue+"</td><td>"
                                                         +n[i].getElementsByTagName("usn")[0]
-                                                        .childNodes[0].nodeValue
-                                                        + "</td></tr>";
+                                                        .childNodes[0].nodeValue+"</td></tr>";
                                                 }
-                        document.getElementById("dataTable").innerHTML=myTable;
+                                document.getElementById("dataTable").innerHTML=myTable;
                         }
                 </script>
-
 		<center>
                 <input type="button" class="but" onclick="callTable()" value="Click Here">
                 <br>
@@ -91,4 +87,3 @@
 		</center>
         </body>
 </html>
-

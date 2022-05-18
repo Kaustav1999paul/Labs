@@ -26,35 +26,27 @@
 				var students=[
 						{ "stud_id":"RVCE21MCA01",
 						  "stud_name":"Abhi",
-						  "major":"Python",
-						  "mobileno":"9944321012"
 						},
 						{ "stud_id":"RVCE21MCA02",
 						  "stud_name":"Arun",
-						  "major":"WAP",
-						  "mobileno":"6312332100"
 						},
 						{ "stud_id":"RVCE21MCA03",
 						  "stud_name":"Bhavana",
-						  "major":"LSS",
-						  "mobileno":"7312312300"
 						}
 					]
 
-				var tablebody='<table border="1"><tr><th>Student id</th><th>student name</th><th>major</th><th>mobile number</th></tr>';
-				students.forEach(function(d)
-				{
-					tablebody+='<tr><td>'+d.stud_id+'</td><td>'+d.stud_name+'</td><td>'+d.major+'</td><td>'+d.mobileno+'</td></tr>';
+				var tablebody='<tr><th>Student id</th><th>student name</th></tr>';
+				students.forEach(function(d){
+					tablebody+= '<tr><td>'+d.stud_id+'</td><td>'+d.stud_name+'</td></tr>';
 				});	
-				tablebody+='<table>';
-				var divContainer=document.getElementById("showData");
-				divContainer.innerHTML=tablebody;			
+
+				document.getElementById("dataTable").innerHTML=tablebody;
 			}
 		</script>
 	</head>
 	<body>
 		<button type="button" onclick=CreateTableFromJson()>get info</button>
-		<p id="showData"></p>
+		<table id="dataTable"></table>
 	</body>
 </html>
 
