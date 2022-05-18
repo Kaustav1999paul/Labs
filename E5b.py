@@ -31,7 +31,7 @@ class Derive1(Student):
 
 	def display(self):
 		print("Total: ", self.total)
-		per = (self.total*100)/5
+		per = (self.total*100)/600
 		print("Percent: ", per)
 
 #------------------------------------------------------------

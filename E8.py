@@ -23,7 +23,7 @@ while True:
 			print("File Not Found")
 	elif n == 3:
 		try:
-			f = open('f1.txt', 'r',"w")
+			f = open('f1.txt', 'r','w')
 			print("Success")
 		except TypeError:
 			print("Type Error")
@@ -35,7 +35,7 @@ while True:
 			print("Name Error")
 	elif n == 5:
 		try:
-			f = open('f2', 'w+')
+			f = open('f2', 'w')
 			f.write("Hello")
 			f2 = open('f2', 'r')
 			print("Success")

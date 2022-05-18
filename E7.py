@@ -11,7 +11,7 @@ class Employee:
 		print("---------------------")
 	def promotion(self):
 		increase = 1.5
-		self.pay = float(self.pay*increase)
+		self.pay = float(self.pay * increase)
 
 class Developer(Employee):
 	def promotion(self):

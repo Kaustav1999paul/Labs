@@ -31,7 +31,7 @@ while True:
 	elif n == 2:
 		s1.Hello(stt)
 	elif n == 3:
-                s1.Hello(stt,age)
+		s1.Hello(stt,age)
 	elif n == 4:
 		exit()
 	else:

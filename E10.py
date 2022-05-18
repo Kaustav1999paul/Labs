@@ -30,6 +30,5 @@ if num < 0:
 fibonacci = fib()
 
 for x in range(num):
-    
     print(next(fibonacci))
 

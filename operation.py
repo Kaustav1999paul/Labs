@@ -39,12 +39,13 @@ class operation:
 				self.list.append(int(input("Enter the element: ")))
 			print(self.list)
 		else:
+			# For Division
 			self.no = int(input("Enter the size of list: "))
-                        for _ in range(self.no):
+        	for _ in range(self.no):
 				j = int(input("Enter the element: "))
 				if j != 0:
-                                	self.list.append(j)
+                	self.list.append(j)
 				else:
 					self.list.append(j+1)
-			print("0 not allowed")
+					print("0 not allowed")
 

@@ -1,4 +1,4 @@
-class Student():
+class Student:
 	def __init__(self):
 		self.name = str(input("Enter Name: "))
 		self.usn = str(input("Enter USN: "))
@@ -11,7 +11,6 @@ class Student():
 		print("USN: ", self.usn)
 		print("Age: ", self.age)
 		print("-----------")
-
 
 #-------------------------------------------------------------------
 
