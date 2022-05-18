@@ -73,9 +73,9 @@
         document.getElementById("passWord").value = '';
 	}
 	var ck_username = /^1[A-ZA-Z0-90-9A-ZA-ZA-Z0-90-90-9]{10,}$/;
-        var ck_pwd = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    var ck_pwd = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 
-        function check(form){
+    function check(form){
 		var userid = document.getElementById("userName").value;
 		var pwd = document.getElementById("passWord").value;
 		if(userid == "" || pwd == ""){
@@ -89,23 +89,19 @@
                 alert("Welcome back "+ userid);
                 document.write(Date());
 				document.write("\n  Welcome "+ userid);
-				applycolor();
+				document.body.style.background = colorpicker();
             }else{
 		     	alert("Error in login!!")
             }
         }
-	function colorpicker(){
+	    function colorpicker(){
     		var num = '0123456789ABCDEF';
     		var code = "#";
     		for(var count = 0 ; count<6; count++){
         		code = code+num[Math.floor(Math.random() * 16)];
     		}
     		return code;
-	}
-	function applycolor(){
-    		var b = document.getElementById("color");
-    		document.body.style.background = colorpicker();
-	}
+	    }
 }
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
