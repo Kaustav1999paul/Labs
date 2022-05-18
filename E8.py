@@ -39,6 +39,7 @@ while True:
 			f.write("Hello")
 			f2 = open('f2', 'r')
 			print("Success")
+			
 		except IOError:
 			print("IOError")
 	elif n == 6:
