@@ -19,7 +19,7 @@ const data = [
     .append('svg')
     .attr('width', 1000)
     .attr('height', 500);
-
+    
   const x = d3.scaleBand()
     .domain(d3.range(data.length))
     .range([50,1000])
